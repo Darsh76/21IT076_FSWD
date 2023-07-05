@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>Enter Your Age:</strong>
+    <input type="text" name="age" id="idAge">
+    <input type="button" value="Check" id="idBtn" onclick="checkAge()">
+    <p id="idDemo"></p>
+
+    <script>
+        function checkAge() {
+            var age = parseInt(document.getElementById("idAge").value);
+            if (age < 18) {
+                document.getElementById("idDemo").textContent = "You are a minor."
+            } else if (age >= 18 && age <= 65) {
+                document.getElementById("idDemo").textContent = "You are an adult."
+            } else {
+                document.getElementById("idDemo").textContent = "You are a senior citizen."
+            }
+        }
+    </script>
+</body>
+</html>
